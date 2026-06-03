@@ -3,7 +3,7 @@ import { LandingPageConfig } from './types';
 // O Template flexível: basta alterar este arquivo para o próximo cliente.
 export const lpData: LandingPageConfig = {
   theme: {
-    logoUrl: '/logo.png.jpg', // O usuário pode subir o logotipo real na pasta public
+    logoUrl: './logo.png.jpg', // O usuário pode subir o logotipo real na pasta public
     primaryColor: '#B68D5D', // Cor areia/dourada inspirada na identidade do PDF
     secondaryColor: '#A0784E',
     backgroundColor: '#FAF8F5', // Fundo creme bem suave
