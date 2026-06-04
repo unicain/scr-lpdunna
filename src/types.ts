@@ -40,6 +40,19 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface SpaceImage {
+  url: string;
+  alt: string;
+  featured?: boolean;
+}
+
+export interface SpaceConfig {
+  sectionTitle: string;
+  sectionSubtitle: string;
+  text: string;
+  images: SpaceImage[];
+}
+
 export interface LandingPageConfig {
   theme: {
     logoUrl: string;
@@ -53,6 +66,7 @@ export interface LandingPageConfig {
     whatsappMessage: string;
     address: string;
     googleMapsLink: string;
+    workingHours: string;
   };
   hero: {
     headline: string;
@@ -83,6 +97,7 @@ export interface LandingPageConfig {
     instagramUrl: string;
     items: GalleryItem[];
   };
+  space?: SpaceConfig;
   pricing?: {
     sectionTitle: string;
     sectionSubtitle: string;

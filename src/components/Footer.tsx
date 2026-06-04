@@ -27,6 +27,12 @@ export function Footer() {
                         </a>
                     </div>
                 </li>
+                <li className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-slate-400 shrink-0 mt-1" />
+                    <div className="text-sm whitespace-pre-line">
+                        {lpData.contact.workingHours}
+                    </div>
+                </li>
              </ul>
           </div>
           

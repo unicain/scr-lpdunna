@@ -14,11 +14,12 @@ export const lpData: LandingPageConfig = {
     whatsappMessage: 'Olá! Gostaria de saber mais sobre as aulas de Pilates e agendar uma aula experimental.',
     address: 'Augusto Spengler, 1090 - Verena, Santa Cruz do Sul - RS',
     googleMapsLink: 'https://www.google.com/maps/dir/Dunna+pilates+-+R.+Augusto+Spengler,+1090+-+Verena,+Santa+Cruz+do+Sul+-+RS,+96820-020/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x951ca30014169097:0x774ae826d963baca?sa=X&ved=1t:57443&ictx=111',
+    workingHours: 'De segunda a sexta:\n06:00 às 12:00\n15:00 às 18:30',
   },
   hero: {
     headline: 'Um Studio de Pilates Clássico',
     subheadline: 'Existimos para fazer com que as pessoas percebam a sua força e o seu poder de evolução. Descubra a potência escondida dentro de você!',
-    imageUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: './fachada_dunna_slogan.jpg?v=2',
     ctaText: 'Agendar Aula Experimental',
   },
   services: {
@@ -55,7 +56,7 @@ export const lpData: LandingPageConfig = {
     name: 'Equipe Dunna',
     role: 'Desperte sua força, vibre cada evolução!',
     bio: 'Nossa equipe é formada por pessoas apaixonadas pelo método: Cris (fundadora e instrutora), Gisele (instrutora), Lara (social media) e Marta (gestão e atendimento). Trabalhamos juntas para que o pilates transforme a sua vida e te traga ainda mais qualidade e bem-estar.',
-    imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop', 
+    imageUrl: './dunna_equipe.jpg?v=2', 
     credentials: [
       'Cris: fundadora e instrutora',
       'Gisele: instrutora',
@@ -72,28 +73,28 @@ export const lpData: LandingPageConfig = {
       {
         id: '1',
         type: 'image',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2072&auto=format&fit=crop',
+        thumbnailUrl: './dunna_equip_horiz.jpg',
         caption: 'Conectando mente e corpo com exercícios precisos do Pilates Clássico.',
         postUrl: 'https://www.instagram.com/dunnapilates/'
       },
       {
         id: '2',
-        type: 'video',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069&auto=format&fit=crop',
+        type: 'image',
+        thumbnailUrl: './dunna_usos2.jpg?v=2',
         caption: 'Um pedacinho da nossa rotina no estúdio. Venha conhecer!',
         postUrl: 'https://www.instagram.com/dunnapilates/'
       },
       {
         id: '3',
         type: 'image',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop',
+        thumbnailUrl: './dunna_usos.jpg',
         caption: 'Postura, respiração e força. Os pilares do nosso atendimento.',
         postUrl: 'https://www.instagram.com/dunnapilates/'
       },
       {
         id: '4',
         type: 'image',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2069&auto=format&fit=crop',
+        thumbnailUrl: './dunna_equip_horizontal.jpg',
         caption: 'Equipamentos modernos para oferecer o melhor a você.',
         postUrl: 'https://www.instagram.com/dunnapilates/'
       }
@@ -127,6 +128,26 @@ export const lpData: LandingPageConfig = {
           { timesPerWeek: '2X', mensal: 'R$ 980,00', trimestral: 'R$ 870,00', semestral: 'R$ 810,00' },
           { timesPerWeek: '3X', mensal: 'R$ 1.200,00', trimestral: 'R$ 1.090,00', semestral: 'R$ 1.030,00' }
         ]
+      }
+    ]
+  },
+  space: {
+    sectionTitle: 'Nosso Espaço',
+    sectionSubtitle: 'Ambiente',
+    text: 'A Dunna é um espaço pensado para o cuidado com a mente e o corpo de forma consciente, respeitando o método, o processo e o tempo de cada pessoa ✨\n\nAqui, praticamos o Pilates Clássico com atenção, constância e presença.',
+    images: [
+      {
+        url: './dunna_recepcao.jpg',
+        alt: 'Recepção do Estúdio Dunna',
+        featured: true
+      },
+      {
+        url: './dunna_interno.jpg',
+        alt: 'Interior do Estúdio Dunna'
+      },
+      {
+        url: './dunna_equipamentos.jpg',
+        alt: 'Equipamentos do Estúdio Dunna'
       }
     ]
   },
