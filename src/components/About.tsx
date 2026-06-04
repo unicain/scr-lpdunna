@@ -15,15 +15,6 @@ export function About() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div 
-              className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-xl hidden md:block"
-              style={{ backgroundColor: lpData.theme.primaryColor }}
-            >
-              <h3 className="text-3xl font-display font-bold text-white mb-1">
-                +2000
-              </h3>
-              <p className="text-white/90 font-medium font-sm">Pacientes Recuperados</p>
-            </div>
           </div>
           
           <div>
