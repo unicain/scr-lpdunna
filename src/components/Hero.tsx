@@ -20,6 +20,11 @@ export function Hero() {
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full flex flex-col md:flex-row items-center gap-12">
         <div className="w-full max-w-2xl lg:shrink-0 xl:max-w-3xl">
+          <img 
+            src="/dunna_nome_extenso.png" 
+            alt="Logo Extenso" 
+            className="h-20 w-auto mb-8 object-contain" 
+          />
           <h1 className="font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl text-balance">
             {lpData.hero.headline}
           </h1>
