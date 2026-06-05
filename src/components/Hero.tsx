@@ -8,7 +8,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white pt-24 pb-32 sm:pt-32 sm:pb-40 rounded-b-[3rem] shadow-sm flex items-center min-h-[90vh]">
+    <section className="relative overflow-hidden bg-white pt-32 pb-32 sm:pt-40 sm:pb-40 rounded-b-[3rem] shadow-sm flex items-center min-h-[90vh]">
       <div className="absolute inset-0 z-0">
         <img 
           src={lpData.hero.imageUrl} 

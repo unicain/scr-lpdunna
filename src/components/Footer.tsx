@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 py-16 sm:py-24 text-slate-300">
+    <footer id="site-footer" className="bg-slate-900 py-16 sm:py-24 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
@@ -56,9 +56,14 @@ export function Footer() {
             <p>
                 © {new Date().getFullYear()} {lpData.about.name}. Todos os direitos reservados.
             </p>
-            <p>
-                Este é um site demonstrativo de prospectação de alta conversão.
-            </p>
+            <div className="flex flex-col md:items-end text-center md:text-right gap-1">
+              <p>
+                  Este é um site demonstrativo de prospectação de alta conversão, criado com informações tiradas do Google Maps e redes sociais.
+              </p>
+              <p className="text-[#B68D5D] font-medium tracking-wide">
+                  Demonstração disponível por tempo limitado!
+              </p>
+            </div>
         </div>
       </div>
     </footer>

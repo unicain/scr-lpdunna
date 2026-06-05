@@ -9,7 +9,7 @@ export function Header() {
   };
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 py-6 px-6 lg:px-8">
+    <header className="absolute top-14 left-0 right-0 z-50 py-6 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl flex items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center gap-2">

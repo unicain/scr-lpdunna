@@ -1,4 +1,5 @@
 import React from 'react';
+import { DemoBanner } from './components/DemoBanner';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-[#B68D5D]/20 selection:text-slate-900 relative">
+      <DemoBanner />
       <Header />
       <Hero />
       <Services />
