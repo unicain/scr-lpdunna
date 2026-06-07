@@ -19,10 +19,15 @@ A LP precisa de chaves seguras para Analytics e Notificações que não devem ir
    VITE_POSTHOG_HOST="https://us.i.posthog.com"
    ```
 
-## Passo 3: Ingestão de Dados do Lead (`src/data.ts`)
+## Passo 3: Adaptação de Dados e Conteúdo (`src/data.ts`)
 Toda a inteligência e conteúdo da página está centralizada em **um único arquivo**.
+
+> 💡 **ATALHO COM A IA (Altamente Recomendado)**:  
+> Você **PODE e DEVE** enviar os links do **Google Maps** e do **Instagram** do lead no chat. Basta pedir algo como: *"Agente, leia estes links (Maps, Instagram e/ou Site) e adapte esta LP para o lead"*. O agente irá acessar as fontes, identificar o nicho, criar uma copy focada, puxar fotos e já popular as seções de Serviços, Depoimentos e FAQ automaticamente para você em instantes!
+
+Caso prefira (ou precise) fazer um ajuste manual ou revisão final:
 1. Abra o arquivo `src/data.ts`.
-2. Substitua os dados pelas informações garimpadas do Google Maps e Redes Sociais do lead:
+2. Verifique ou substitua as informações coletadas para o lead:
    - **`seo`**: Atualize o nome que vai aparecer na aba do mapa e a descrição curta. *(Lembre-se: O SEO é trocado automaticamente graças ao hook `useSEO` e os metadados para envio no WhatsApp já vão puxar essa configuração)*.
    - **`contact`**: Coloque o número do WhatsApp correto do lead. A `FloatingWhatsApp` reage a isso automaticamente.
    - **`hero`**: Ajuste a Promessa Principal (Headline) para algo irresistível ao nicho do prospect.
@@ -30,7 +35,10 @@ Toda a inteligência e conteúdo da página está centralizada em **um único ar
    - **Imagens**: Atualize as URLs das imagens com fotos reais do local (pegas no Maps/Instagram) ou use bancos de imagens de alta qualidade que representem o espaço.
 
 ## Passo 4: Identidade Visual (Cores)
-O template atual usa um tom Dourado/Areia (ex: `#B68D5D`) e fundos da paleta `slate`. Para conectar com a marca do lead:
+O template base usa um tom Dourado/Areia (ex: `#B68D5D`) e fundos da paleta `slate`. Para conectar com a marca do lead:
+*(Nota: Se você enviou o Instagram/Site no Passo 3, nós já devemos ter ajustado a cor de destaque para você!)*
+
+Se precisar ajustar na mão:
 1. Encontre a cor primária da marca do prospect (via site, logo ou instagram).
 2. Substitua as ocorrências da cor hexadecimal na base do projeto (especialmente em `src/data.ts` se houver cores configuradas lá, ou nas classes do Tailwind ao longo dos componentes).
 3. Se quiser alterar a cor de fundo dos botões principais, procure por `bg-[#B68D5D]` ou `bg-slate-900` e troque pela cor principal da nova marca.
