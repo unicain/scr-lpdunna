@@ -22,6 +22,10 @@ When modifying this project or creating a new variant for a lead, **MUST** maint
 4. **Web Email Notifications (Web3Forms)**:
    - If contact forms or access gates are implemented in the future, prefer using `fetch` with Web3Forms (using `VITE_WEB3FORMS_ACCESS_KEY`) so the user gets notified in their email `unicainteli@gmail.com` without needing a backend server.
 
+5. **Dynamic SEO Configuration (`useSEO.ts`)**:
+   - The application uses a custom hook (`useSEO`) mapped natively in `App.tsx` that automatically injects the document title, meta descriptions, and favicon based on the centralized configuration in `src/data.ts`.
+   - Leave the hook intact to ensure the lead sees their own brand name and context when the link is shared (e.g., on WhatsApp, where meta tags generate link previews).
+
 ## Standard Landing Page Structure
 To ensure high conversion and a complete demonstration, strictly maintain the following layout of sections (similar to the Dunna template) when adapting to new leads:
 - **Header & Hero**: Navigation, strong high-impact value proposition, background image, and primary Call to Action.
@@ -36,7 +40,7 @@ To ensure high conversion and a complete demonstration, strictly maintain the fo
 
 ## Adaptation Workflow for New Leads
 When the user asks to "adapt this for a new lead" or changes the niche:
-- **Data Centralization**: Look for the main data source (like `src/data.ts` or static content files) and update texts, images, and services to match the new prospect.
+- **Data Centralization**: Look for the main data source (like `src/data.ts` or static content files) and update texts, images, and services to match the new prospect. Because the `useSEO` hook is automatic, changing this file will also automatically update the site title, favicon, and SEO meta tags for sharing.
 - **Styling**: Update the primary color hex codes (currently using variations of `#B68D5D`) in the Tailwind classes or CSS variables to match the new prospect's brand colors.
 - **No Over-Engineering**: Keep it a single-page application (SPA). Do not introduce complex routing or backend databases unless explicitly requested. The goal is a fast visual demonstration, not a complex SaaS.
 - **Copywriting**: Use persuasive, high-conversion copy. Focus on benefits, social proof, and clear Call To Actions (CTAs).
