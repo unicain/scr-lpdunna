@@ -42,8 +42,13 @@ Nunca envie o link "puro". Use o parâmetro que ativa o **DemoBanner** para dar 
 3. *Exemplo:* `https://seu-app-deployado.com/?lead=Clínica%20Sorriso`
 4. Isso fará o topo da página dizer: *"DEMONSTRAÇÃO EXCLUSIVA, criada para Clínica Sorriso"*.
 
-## Passo 6: Deploy e Disparo
-1. **Publicação**: Use a função de *Share* (Compartilhar App) do AI Studio para gerar a URL pública.
-2. **Teste**: Abra o painel do seu **PostHog** e acesse a sua própria URL. Confirme se a sua sessão apareceu ao vivo na aba "Live Events" ou "Recordings".
-3. **Disparo**: Mande a mensagem de prospecção fria incluindo sua URL com o parâmetro `?lead=`.
-4. **Follow-up**: Monitore no PostHog quando o lead abrir a página. As métricas de *scroll* até 70% ou cliques nas seções de Preços indicarão o pico de interesse, que é o gatilho perfeito para você disparar a segunda mensagem no WhatsApp.
+## Passo 6: Deploy no GitHub e Cloudflare (Subdomínio)
+1. **Exportação**: Exporte o código do projeto para um novo repositório no seu GitHub.
+2. **DNS no Cloudflare**: Acesse o painel do Cloudflare (onde o domínio `unicain.com.br` está gerenciado) e crie um novo registro **CNAME** apontando o subdomínio do lead (ex: `clinicasorriso`) para o servidor do GitHub Pages (geralmente `seu-usuario.github.io`).
+3. **GitHub Pages + Custom Domain**: No repositório do GitHub, vá na aba *Settings* > *Pages*. Configure o deploy da aplicação (seja exportando a branch `main`/pasta `dist` ou via GitHub Actions para Vite). Depois, na seção **Custom domain**, insira o subdomínio completo (ex: `clinicasorriso.unicain.com.br`), clique em *Save* e aguarde a plataforma emitir o certificado SSL/HTTPS.
+
+## Passo 7: Teste, Disparo e Follow-up
+1. **Teste**: Acesse a URL do subdomínio criado (ex: `https://clinicasorriso.unicain.com.br`). Abra o painel do seu **PostHog** e confirme se a sua sessão apareceu ao vivo na aba "Live Events" ou "Recordings".
+2. **Disparo**: Mande a mensagem de prospecção fria incluindo a URL oficial que você criou com o parâmetro `?lead=`. 
+   *(Ex: `https://clinicasorriso.unicain.com.br/?lead=Clínica%20Sorriso`)*
+3. **Follow-up**: Monitore no PostHog quando o lead abrir a página. As métricas de *scroll* até 70% ou cliques nas seções de Preços indicarão o pico de interesse, que é o gatilho perfeito para você disparar a segunda mensagem no WhatsApp.
