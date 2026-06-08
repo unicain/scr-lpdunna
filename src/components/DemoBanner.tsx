@@ -59,7 +59,7 @@ export function DemoBanner() {
         ) : (
           <div className="flex w-full sm:w-auto items-center justify-between sm:justify-center gap-3 sm:gap-8 animate-in slide-in-from-bottom-2 duration-500 fade-in">
             <p className="text-slate-100 hidden sm:block">
-              Essa versão pode ser personalizada para você em 48hrs.
+              Podemos personalizar este site em 48hrs, tem interesse?
             </p>
             <p className="text-slate-100 sm:hidden">
               Personalizamos para você em 48hrs.
